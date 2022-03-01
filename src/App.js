@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
+const tkid = process.env.OPENWEATHER_API_KEY;
+
 const getBRLNumbers = num => 
   Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 1 }).format(num);
 
@@ -26,7 +28,7 @@ function App({coords}) {
   async function getWeekWeather(coords) {
     const {lat, long} = coords;
 
-    const result = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=1c3174b8804f7374fe2299e3a8a216a0&units=metric&lang=pt_br`);
+    const result = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely,hourly&appid=${tkid}&units=metric&lang=pt_br`);
     const wheaterResult = await result.json();
 
     setWeather(wheaterResult);
