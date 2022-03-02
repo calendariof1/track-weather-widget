@@ -20,6 +20,8 @@
   padding-left: 2rem
 }
 
+.track-weather .col-1 { flex-direction: column }
+
 .track-weather .temp {
     color: var(--ghost-accent-color);
     font: 9.5rem/9.5rem sans-serif;

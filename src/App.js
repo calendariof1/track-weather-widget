@@ -22,7 +22,7 @@ const ContentCollumn = ({num, children}) => (
 )
 
 function App({coords}) {
-  console.log(coords)
+
   const [weather, setWeather] = useState({});
 
   async function getWeekWeather(coords) {
