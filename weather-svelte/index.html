@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Svelte + Vite App</title>
+  <style>
+    :root {
+      --ghost-accent-color: #fe4a00;
+      --color-darkgrey: #15171a;
+      --color-midgrey: #738a94;
+    }
+  </style>
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org/",
+    "@type": "BroadcastEvent",
+    "url": "https://calendariof1.com/emilia-romagna-2022-04-24",
+    "name": "🇮🇹 Grande Premio de Emilia Romagna - 2022",
+    "duration": "P3D",
+    "startDate": "2022-04-22",
+    "endDate": "2022-04-24",
+    "broadcastOfEvent": {
+        "@type": "SportsEvent",
+        "name": "Formula 1 Rolex Gran Premio Dell'Emilia Romagna 2022",
+        "description": "Grande Prêmio de Formúla 1 - Dell'Emilia Romagna 2022",
+        "image": "https://calendariof1.com/content/images/size/w2000/2022/03/jose-mizrahi-VEKUmQkOe_Q-unsplash.jpg",
+        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "organizer": {
+            "@type": "Organization",
+            "name": "Fórmula 1",
+            "url": "https://f1.com"
+        },
+        "competitor": [
+            {
+                "@type": "SportsTeam",
+                "name": "Mercedes-AMG PETRONAS F1 Team"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Oracle Red Bull Racing"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Scuderia Ferrari"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "McLaren Formula 1"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "BWT Alpine F1 Team"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Scuderia AlphaTauri"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Aston Martin Aramco Cognizant F1 Team"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Williams Racing"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Alfa Romeo F1 Team ORLEN"
+            },
+            {
+                "@type": "SportsTeam",
+                "name": "Haas F1 Team"
+            }
+        ],
+        "startDate": "2022-04-22",
+        "endDate": "2022-04-24",
+        "location": [
+            {
+                "@type": "VirtualLocation",
+                "url": "https://f1tv.formula1.com"
+            },
+            {
+                "@context": "https://schema.org",
+                "@type": "Place",
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "44.3437931",
+                    "longitude": "11.7140091"
+                },
+                "name": "Autodromo Enzo e Dino Ferrari"
+            }
+        ],
+        "eventSchedule": [
+            {
+                "@type": "Schedule",
+                "name": "Treino Livre 1",
+                "byDay": "https://schema.org/Friday",
+                "startDate": "2022-04-22",
+                "endDate": "2022-04-22",
+                "startTime": "08:30:00",
+                "endTime": "09:30:00",
+                "scheduleTimezone": "America/Sao_Paulo"
+            },
+            {
+                "@type": "Schedule",
+                "name": "Qualificação",
+                "byDay": "https://schema.org/Friday",
+                "startDate": "2022-04-22",
+                "endDate": "2022-04-22",
+                "startTime": "12:00:00",
+                "endTime": "14:00:00",
+                "scheduleTimezone": "America/Sao_Paulo"
+            },
+            {
+                "@type": "Schedule",
+                "name": "Treino Livre 2",
+                "byDay": "https://schema.org/Saturday",
+                "startDate": "2022-04-23",
+                "endDate": "2022-04-23",
+                "startTime": "07:30:00",
+                "endTime": "08:30:00",
+                "scheduleTimezone": "America/Sao_Paulo"
+            },
+            {
+                "@type": "Schedule",
+                "name": "Corrida Sprint",
+                "byDay": "https://schema.org/Saturday",
+                "startDate": "2022-04-23",
+                "endDate": "2022-04-23",
+                "startTime": "11:30:00",
+                "endTime": "12:00:00",
+                "scheduleTimezone": "America/Sao_Paulo"
+            },
+            {
+                "@type": "Schedule",
+                "name": "Corrida",
+                "byDay": "https://schema.org/Sunday",
+                "startDate": "2022-04-24",
+                "endDate": "2022-04-24",
+                "startTime": "10:00:00",
+                "endTime": "12:00:00",
+                "scheduleTimezone": "America/Sao_Paulo"
+            }
+        ]
+    }
+}
+</script>
+</head>
+
+<body>
+  <div id="weather-widget"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

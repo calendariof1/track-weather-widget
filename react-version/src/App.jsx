@@ -1,25 +1,22 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 
-const tkid = process.env.OPENWEATHER_API_KEY;
+import {DailyComponent} from './DailyComponent';
+
+import {LabeledText} from './LabeledText';
+
+const tkid = '0e302008d450a0efe734fc51ba7292c3'// process.env.OPENWEATHER_API_KEY;
 
 const getBRLNumbers = num => 
   Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 1 }).format(num);
 
-const convertMsToKmh = ms => ms * 3.6;
-
-const LabeledText = ({ label, children }) => (
-  <p>
-    <span className="text-label">{label}: </span>
-    <span className="text">{children}</span>
-  </p>
-);
+const convertMsToKmh = (ms = 0) => ms * 3.6;
 
 const ContentCollumn = ({num, children}) => (
   <div className={`col-${num}`}>
     {children}
   </div>
-)
+);
 
 function App({coords}) {
 
@@ -78,13 +75,19 @@ function App({coords}) {
                 }km/h
               </LabeledText>
               <LabeledText label="Direção do Vento">
-                {
-                  weather.current.wind_deg
-                }º
+                {weather.current.wind_deg}º
               </LabeledText>
             </ContentCollumn>
           </div>
       }
+
+      <div className="display-flex row daily-temps">
+        {
+          weather.daily && weather.daily.filter((_, i) => i < 3).map(daily => 
+            <DailyComponent dailyWeather={daily} getBRLNumbers={getBRLNumbers}>
+            </DailyComponent>)
+        }
+      </div>
     </div>
   );
 }
