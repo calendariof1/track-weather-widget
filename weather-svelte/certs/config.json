@@ -1,0 +1,16 @@
+{
+  "record": {
+    "hosts": [
+      "localhost",
+      "127.0.0.1",
+      "192.168.0.97",
+      "192.168.64.1",
+      "auth.flpms.me"
+    ],
+    "hash": {
+      "key": "fc0c94501646084838482896bc44fc2716c6811826da5f2e3bd8cba72e50df3d",
+      "cert": "f77437a29d3405e967b41102ee889202d3cb53e421d42a2d4ee2b29791c15811"
+    }
+  },
+  "configFilePath": "/Users/filipe/calendariof1/track-weather-widget/weather-svelte/certs/config.json"
+}

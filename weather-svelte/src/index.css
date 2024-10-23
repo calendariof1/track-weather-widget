@@ -29,36 +29,108 @@
   padding-left: 2rem
 }
 
-.track-weather .col-1 {
-  flex-direction: column
-}
+.track-weather .col-1 {flex-direction: column}
 
 .track-weather .temp {
   color: var(--ghost-accent-color);
   font: 9.5rem/9.5rem sans-serif;
-  margin: 0
+  margin: 0;
+  min-height: 9.5rem;
+  min-width: 8rem;
 }
 
 .track-weather .temp-description {
   color: var(--color-darkgrey);
+  min-height: 1rem;
+  min-width: 8rem;
   text-transform: capitalize;
-  text-align: center;
+  text-align: center
 }
 
-.track-weather .daily-section {
+.hourly-daily-section {
   min-width: 8rem;
   text-align: center;
 }
 
-.track-weather .daily-temps .daily-temp {
+.hourly-daily-section .daily-temp {
   color: var(--ghost-accent-color);
   font: 3.6rem/3.5rem sans-serif;
   margin: 1rem 0 0 0;
 }
 
-.track-weather .daily-temps .date {
-  text-align: center;
+.hourly-daily-section .date {
   margin: 0.5rem 0 1rem 0;
+}
+
+.align-center {text-align: center}
+
+.minute-minute-widget {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  justify-content: center;
+  width: 100%;
+}
+
+.minute-minute-widget .hour {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.minute-minute-widget .hour .track-weather {
+  justify-content: center
+}
+
+.minute-minute-widget .track-weather .temp {
+  font: 4.5rem/2.5rem sans-serif !important
+}
+
+.minute-minute-widget .minutes {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.minute-minute-widget .minutes .time {
+  color: var(--color-midgrey);
+  font-size: 1.8rem
+}
+
+.minute-minute-widget .minutes .precipitation {
+  color: var(--ghost-accent-color);
+}
+
+.shimmer {
+  min-height: 1rem;
+  animation-duration: 1.8s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #AAA;
+  background: linear-gradient(to right, #F6F6F6 8%, #F0F0F0 18%, #F6F6F6 33%);
+  background-size: 1200px 100%;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -100% 0;
+  }
+
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+
+  100% {
+    background-position: 1200px 0;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -99,14 +171,35 @@
     padding-right: 0.5rem
   }
 
-  .track-weather .daily-temps .daily-temp  {
+  .hourly-daily-section .daily-temp {
     color: var(--ghost-accent-color);
     font: 3rem/3rem sans-serif;
   }
 
-  .track-weather .daily-temps .date, 
-  .track-weather .daily-temps .text-label {
+  .hourly-daily-section .date,
+  .hourly-daily-section .text-label {
     font-size: 0.9rem;
   }
 
+  .minute-minute-widget .track-weather .col-3 {
+    border-top: none;
+    text-align: right;
+    padding: 0 0.5rem;
+  }
+
+  .minute-minute-widget .track-weather .col-1 {
+    max-width: 11.2rem;
+  }
+
+  .minute-minute-widget>.track-weather .temp {
+    font: 5rem/4.5rem sans-serif
+  }
+
+  .minute-minute-widget .minutes .time {
+    font-size: 1.2rem;
+  }
+
+  .minute-minute-widget .minutes .precipitation {
+    font-size: .8rem;
+  }
 }
